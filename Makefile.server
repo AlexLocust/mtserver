@@ -1,5 +1,5 @@
 CC		= g++
-CFLAGS		= -c -Wall
+CFLAGS		= -c -Wall -Wconversion-null
 LDFLAGS		= -lpthread
 SOURCES		= server.cpp ../threads/thread.cpp ../tcpsockets/tcpacceptor.cpp ../tcpsockets/tcpstream.cpp
 INCLUDES	= -I../threads -I../wqueue -I../tcpsockets

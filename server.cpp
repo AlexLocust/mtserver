@@ -5,7 +5,7 @@
   
    ------------------------------------------
 
-   Copyright © 2013 [Vic Hargrave - http://vichargrave.com]
+   Copyright ï¿½ 2013 [Vic Hargrave - http://vichargrave.com]
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -26,6 +26,8 @@
 #include "thread.h"
 #include "wqueue.h"
 #include "tcpacceptor.h"
+#include "signal.h"
+
  
 class WorkItem
 {
@@ -81,6 +83,7 @@ int main(int argc, char** argv)
         printf("usage: %s <workers> <port> <ip>\n", argv[0]);
         exit(-1);
     }
+    signal(SIGPIPE, SIG_IGN);
     int workers = atoi(argv[1]);
     int port = atoi(argv[2]);
     string ip;

@@ -1,5 +1,5 @@
 CC		= g++
-CFLAGS		= -g -c -Wall
+CFLAGS		= -g -c -Wall -Wconversion-null
 LDFLAGS		= 
 SOURCES		= client.cpp ../tcpsockets/tcpstream.cpp ../tcpsockets/tcpconnector.cpp
 INCLUDES	= -I. -I../tcpsockets
